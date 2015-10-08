@@ -1,0 +1,24 @@
+{
+  "name": "player",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/70-10/player.git"
+  },
+  "keywords": [],
+  "author": "70_10",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/70-10/player/issues"
+  },
+  "homepage": "https://github.com/70-10/player#readme",
+  "devDependencies": {
+    "electron-prebuilt": "^0.33.6"
+  }
+}
