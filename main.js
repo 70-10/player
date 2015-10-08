@@ -1,20 +1,20 @@
 "use strict";
 
-var app = require("app");
-var BrowserWindow = require("browser-window");
-var CrashReporter = require("crash-reporter");
+const app = require("app");
+const BrowserWindow = require("browser-window");
+const CrashReporter = require("crash-reporter");
 
 CrashReporter.start();
 
-var mainWindow = null;
+let mainWindow = null;
 
-app.on("window-all-closed", function() {
+app.on("window-all-closed", () => {
   if (process.platform !== "darwin") {
     app.quit();
   }
 });
 
-app.on("ready", function() {
+app.on("ready", () => {
   mainWindow = new BrowserWindow({
     width: 800,
     height: 600
@@ -24,7 +24,7 @@ app.on("ready", function() {
 
   mainWindow.openDevTools();
 
-  mainWindow.on("closed", function() {
+  mainWindow.on("closed", () => {
     mainWindow = null
   });
 });
