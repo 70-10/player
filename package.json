@@ -5,6 +5,7 @@
   "main": "main.js",
   "scripts": {
     "init": "gulp init",
+    "build":"browserify -t babelify ./src/App.jsx -o bundle.js",
     "start": "electron .",
     "test": ""
   },
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/70-10/player#readme",
   "devDependencies": {
+    "browserify": "^11.2.0",
     "coffee-script": "^1.10.0",
     "del": "^2.0.2",
     "electron-prebuilt": "^0.33.7",
@@ -29,6 +31,9 @@
     "run-sequence": "^1.1.4"
   },
   "dependencies": {
-    "log4js": "^0.6.27"
+    "babel": "^5.8.23",
+    "log4js": "^0.6.27",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0"
   }
 }
