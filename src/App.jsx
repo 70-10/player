@@ -3,7 +3,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import Card from "./components/Card";
+
 ReactDOM.render(
-  <h1>Hello, React!</h1>,
+  <div>
+    <Card />
+    <Card />
+  </div>,
   document.body
 );
