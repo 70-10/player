@@ -3,12 +3,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Card from "./components/Card";
+import Card from "./components/Card.jsx";
 
 ReactDOM.render(
   <div>
-    <Card />
-    <Card />
+    <Card url="./image_card.jpg"/>
   </div>,
   document.body
 );

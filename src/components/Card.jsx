@@ -5,7 +5,7 @@ import React from "react";
 export default class Card extends React.Component {
 
   render() {
-    const imgUrl = "./image_card.jpg"
+    const imgUrl = this.props.url;
     const cardImageStyle = {
       width: "256px",
       height: "256px",
