@@ -3,10 +3,32 @@ $ = do require "gulp-load-plugins"
 del = require "del"
 runSequence = require "run-sequence"
 
-gulp.task "init", ->
-  return runSequence "clean", "bower"
+gulp.task "init", -> runSequence "clean", "bower"
 
 gulp.task "clean", del.bind null, ["bower_components"]
 
-gulp.task "bower", ->
-  return $.bower().pipe gulp.dest "bower_components"
+gulp.task "bower", -> $.bower().pipe gulp.dest "bower_components"
+
+gulp.task "watch", $.watchify (watchify) ->
+  buffer = require "vinyl-buffer"
+  formatter = require "pretty-hrtime"
+  time = process.hrtime()
+
+  destFile = "bundle.js"
+
+  return gulp.src "./src/App.jsx"
+             .pipe $.plumber()
+             .pipe watchify
+                watch: true
+                basedir: "./"
+                debug: true
+                transform: ["babelify"]
+             .pipe buffer()
+             .pipe $.sourcemaps.init
+                loadMaps: true
+             .pipe $.rename destFile
+             .pipe $.sourcemaps.write "."
+             .pipe gulp.dest "./"
+             .on "end", ->
+               taskTime = formatter process.hrtime time
+               $.util.log "Bundled", $.util.colors.green(destFile), "in", $.util.colors.magenta(taskTime)

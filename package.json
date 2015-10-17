@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "init": "gulp init",
-    "build":"browserify -t babelify ./src/App.jsx -o bundle.js",
+    "build": "browserify -t babelify ./src/App.jsx -o bundle.js",
     "start": "electron .",
     "test": ""
   },
@@ -21,14 +21,23 @@
   },
   "homepage": "https://github.com/70-10/player#readme",
   "devDependencies": {
+    "babelify": "^6.3.0",
     "browserify": "^11.2.0",
     "coffee-script": "^1.10.0",
     "del": "^2.0.2",
-    "electron-prebuilt": "^0.33.7",
+    "electron-prebuilt": "^0.34.0",
     "gulp": "^3.9.0",
     "gulp-bower": "0.0.10",
-    "gulp-load-plugins": "^1.0.0-rc.1",
-    "run-sequence": "^1.1.4"
+    "gulp-load-plugins": "^1.0.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-util": "^3.0.6",
+    "gulp-watchify": "git://github.com/marcello3d/gulp-watchify.git",
+    "pretty-hrtime": "^1.0.1",
+    "run-sequence": "^1.1.4",
+    "vinyl-buffer": "^1.0.0",
+    "watchify": "^3.4.0"
   },
   "dependencies": {
     "babel": "^5.8.23",
