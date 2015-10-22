@@ -5,7 +5,7 @@ runSequence = require "run-sequence"
 
 gulp.task "init", -> runSequence "clean", "bower"
 
-gulp.task "clean", del.bind null, ["bower_components"]
+gulp.task "clean", del.bind null, ["bower_components", "bundle.js*"]
 
 gulp.task "bower", -> $.bower().pipe gulp.dest "bower_components"
 
