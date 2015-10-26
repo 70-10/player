@@ -7,7 +7,8 @@
     "init": "gulp init",
     "build": "browserify -t babelify ./src/App.jsx -o bundle.js",
     "start": "electron .",
-    "test": ""
+    "test": "",
+    "prepublish": "npm run init"
   },
   "repository": {
     "type": "git",
