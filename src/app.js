@@ -3,11 +3,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Card from "./components/Card";
+import Player from "./components/Player"
 
 ReactDOM.render(
-  <div>
-    <Card url="./image_card.jpg"/>
-  </div>,
+  <Player />,
   document.body
 );
