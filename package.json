@@ -5,7 +5,7 @@
   "main": "main.js",
   "scripts": {
     "init": "gulp init",
-    "build": "browserify -t babelify ./src/App.jsx -o bundle.js",
+    "build": "browserify -t babelify ./src/app.js -o bundle.js",
     "start": "electron .",
     "test": "",
     "prepublish": "npm run init"

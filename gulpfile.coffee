@@ -16,7 +16,7 @@ gulp.task "watch", $.watchify (watchify) ->
 
   destFile = "bundle.js"
 
-  return gulp.src "./src/App.jsx"
+  return gulp.src "./src/app.js"
              .pipe $.plumber()
              .pipe watchify
                 watch: true
