@@ -4,6 +4,7 @@ const app = require("app");
 const BrowserWindow = require("browser-window");
 const CrashReporter = require("crash-reporter");
 const logger = require("log4js").getLogger("Electron");
+const client = require("electron-connect").client;
 
 CrashReporter.start();
 
@@ -43,7 +44,7 @@ app.on("ready", () => {
   mainWindow.loadUrl("file://" + __dirname + "/index.html");
 
   // mainWindow.openDevTools();
-
+  client.create(mainWindow);
   mainWindow.on("closed", () => {
     mainWindow = null
   });
