@@ -17,3 +17,11 @@ $ npm run init
 ```
 $ npm start
 ```
+
+### develop
+
+```
+$ npm run app
+```
+
+execute `gulp watchify` and `gulp serve`
